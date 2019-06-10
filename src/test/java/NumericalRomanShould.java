@@ -3,6 +3,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class NumericalRomanShould {
 
     private NumericalRomain numericalRomain;
@@ -14,16 +16,31 @@ public class NumericalRomanShould {
 
     @Test
     public void convert_1_to_I() {
-        Assert.assertEquals("I", numericalRomain.convert(1));
+        assertEquals("I", numericalRomain.convert(1));
     }
 
     @Test
     public void convert_2_to_II() {
-        Assert.assertEquals("II", numericalRomain.convert(2));
+        assertEquals("II", numericalRomain.convert(2));
     }
 
     @Test
     public void convert_3_to_III() {
-        Assert.assertEquals("III", numericalRomain.convert(3));
+        assertEquals("III", numericalRomain.convert(3));
+    }
+
+    @Test
+    public void convert_6_to_VI() {
+        assertEquals("VI", numericalRomain.convert(6));
+    }
+
+    @Test
+    public void convert_7_to_VII() {
+        assertEquals("VII", numericalRomain.convert(7));
+    }
+
+    @Test
+    public void convert_8_to_VIII() {
+        assertEquals("VIII", numericalRomain.convert(8));
     }
 }
