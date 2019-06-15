@@ -3,11 +3,18 @@ package model;
 public class NumericalRomain {
 
     public String convert(int arabicNumber) {
-        String s = "";
-        for (int i=0 ; i<arabicNumber ; i++) {
-            s += "I";
+        String romanNumber = "";
+
+        if(arabicNumber > 5 ) {
+            romanNumber += "V";
+            arabicNumber -= 5;
         }
-        return s;
+
+        for (int i = 0 ; i < arabicNumber ; i++) {
+            romanNumber += "I";
+        }
+
+        return romanNumber;
     }
 }
 
