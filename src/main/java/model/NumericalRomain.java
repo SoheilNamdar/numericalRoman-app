@@ -5,7 +5,12 @@ public class NumericalRomain {
     public String convert(int arabicNumber) {
         String romanNumber = "";
 
-        if(arabicNumber > 5 ) {
+        if (arabicNumber > 10 ) {
+            romanNumber += "X";
+            arabicNumber -= 10;
+        }
+
+        if (arabicNumber > 5 ) {
             romanNumber += "V";
             arabicNumber -= 5;
         }
@@ -16,5 +21,7 @@ public class NumericalRomain {
 
         return romanNumber;
     }
+
+
 }
 
