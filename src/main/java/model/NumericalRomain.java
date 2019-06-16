@@ -5,25 +5,25 @@ public class NumericalRomain {
     public String romanFor(int decimal){
         String roman = "";
 
-        /*for(RomanToDecimal romanToDecimal : RomanToDecimal.values()) {
-            while (decimal >= romanToDecimal.decimal) {
-                roman += romanToDecimal.roman ;
-                decimal -= romanToDecimal.decimal;
-            }
-        }*/
-        while (decimal>10) {
+
+        while (decimal >= 10) {
             roman += "X";
             decimal -= 10;
         }
 
-        if( decimal > 5) {
+        while ( decimal >= 5) {
             roman += "V";
             decimal -= 5;
         }
 
-        for(int i=0 ; i<decimal ; i++) {
-                roman += "I";
+        while ( decimal >= 1) {
+            roman += "I";
+            decimal -= 1;
         }
+
+       /* for(int i=0 ; i<decimal ; i++) {
+                roman += "I";
+        }*/
         return roman;
     }
 

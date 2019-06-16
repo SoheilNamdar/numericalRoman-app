@@ -69,4 +69,12 @@ public class NumericalRomanShould {
     @Test
     public void convert_37_to_XXXVII() { assertEquals("XXXVII", numericalRomain.romanFor(37));
     }
+
+    @Test
+    public void convert_5_to_V() { assertEquals("V", numericalRomain.romanFor(5));
+    }
+
+    @Test
+    public void convert_37_to_X() { assertEquals("X", numericalRomain.romanFor(10));
+    }
 }
