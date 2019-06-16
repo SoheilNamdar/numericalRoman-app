@@ -5,32 +5,29 @@ public class NumericalRomain {
     public String romanFor(int decimal){
         String roman = "";
 
-
-        while (decimal >= 10) {
-            roman += "X";
-            decimal -= 10;
+        for (RomanToDecimal value : RomanToDecimal.values()) {
+           while (decimal >= value.decimal) {
+                roman += value.roman;
+                decimal -= value.decimal;
+            }
         }
-
-        while ( decimal >= 5) {
-            roman += "V";
-            decimal -= 5;
-        }
-
-        while ( decimal >= 1) {
-            roman += "I";
-            decimal -= 1;
-        }
-
-       /* for(int i=0 ; i<decimal ; i++) {
-                roman += "I";
-        }*/
         return roman;
     }
 
     enum RomanToDecimal {
+        Thousand(1000, "M"),
+        NineHundred(900, "CM"),
+        FiveHundred(500, "D"),
+        FourHundred(400,"CD"),
+        Hundred(100,"C"),
+        Ninety(90,"XC"),
+        Fifty(50,"L"),
+        Fourty(40, "XL"),
+        Ten(10, "X"),
+        Nine(9, "IX"),
         Five(5, "V"),
-        Ten(10, "X");
-
+        Four(4, "IV"),
+        One(1,"I");
 
         public final int decimal;
         public final String roman;

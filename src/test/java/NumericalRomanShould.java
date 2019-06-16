@@ -77,4 +77,8 @@ public class NumericalRomanShould {
     @Test
     public void convert_37_to_X() { assertEquals("X", numericalRomain.romanFor(10));
     }
+
+    @Test
+    public void convert_1459_to_MCDLIX() { assertEquals("MCDLIX", numericalRomain.romanFor(1459));
+    }
 }
